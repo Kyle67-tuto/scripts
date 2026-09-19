@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyle Hub — Roblox UI kits, snippets &amp; scripts</title>
+  <meta name="description" content="Kyle Hub is a community library where Roblox developers share custom UI kits, utility code snippets and open-source game scripts.">
+  <meta name="theme-color" content="#e11d2e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kyle Hub">
+  <meta property="og:description" content="UI kits, utility snippets and open-source scripts for Roblox creators.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Apply saved theme/language before first paint (prevents a flash) -->
+  <script>
+    try {
+      var r = document.documentElement, th = localStorage.getItem("kh_theme"), lg = localStorage.getItem("kh_lang");
+      if (th) r.dataset.theme = th;
+      if (lg) { r.lang = lg; r.dir = lg === "ar" ? "rtl" : "ltr"; }
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+
+  <!-- Lets the code use standard "firebase/app" style imports without a bundler -->
+  <script type="importmap">
+  {
+    "imports": {
+      "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+      "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+      "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+  <header class="hdr">
+    <button class="icon-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="sidebar"></button>
+    <a href="#/home" class="wm sm" aria-label="Kyle Hub">Kyle Hub</a>
+    <span class="sp"></span>
+    <button class="icon-btn txt" id="langBtn" aria-label="Language"></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Theme"></button>
+    <span id="userSlot"></span>
+  </header>
+
+  <div class="backdrop" id="backdrop"></div>
+  <aside class="sidebar" id="sidebar" inert>
+    <div class="sb-top">
+      <a href="#/home" class="wm sm">Kyle Hub</a>
+      <button class="icon-btn" id="sbClose" aria-label="Close"></button>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <a class="discord" id="discordBtn" href="https://discord.gg/9YUzegsNWf" target="_blank" rel="noopener noreferrer"></a>
+  </aside>
+
+  <main id="view" aria-live="polite"></main>
+  <footer class="footer" id="footer"></footer>
+
+  <div class="modal" id="modal" hidden><div class="modal-card" id="modalCard" role="dialog" aria-modal="true"></div></div>
+  <div id="toasts" role="status"></div>
+
+  <noscript><p style="padding:2rem;text-align:center">Kyle Hub needs JavaScript. / يحتاج Kyle Hub إلى تفعيل جافاسكربت.</p></noscript>
+</body>
+</html>
