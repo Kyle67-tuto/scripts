@@ -1,0 +1,12 @@
+/* Kyle Hub — Page-specific styles: admin panel */
+
+/* Admin */
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tbl{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+.row{display:flex;align-items:center;gap:.7rem;padding:.7rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);flex-wrap:wrap}
+.row .grow{flex:1;min-width:160px;overflow-wrap:anywhere}
+.row input{flex:1;min-width:130px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem}
+.row img.mini{width:64px;height:36px;object-fit:cover;border-radius:6px}
+.inline-form{display:flex;gap:.6rem;flex-wrap:wrap}
+.inline-form input{flex:1;min-width:150px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.7rem .85rem}
+.h3{font-size:1.1rem;font-weight:700;margin:.25rem 0 .5rem}

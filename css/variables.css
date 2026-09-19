@@ -1,0 +1,24 @@
+/* Kyle Hub — Design tokens: colors, fonts, spacing (dark = default, light = red/white) */
+
+/* ============ Tokens ============ */
+:root{
+  --bg:#050505; --bg2:#0e0e10; --card:#141416; --card2:#1b1b1e; --line:#2b2b30;
+  --text:#f6f3f3; --muted:#a3a0a4;
+  --red:#ff2d3f; --red2:#b3121f; --red-ink:#fff; --glow:rgba(255,45,63,.35);
+  --code-bg:#0a0a0b; --code-ink:#f5c9cd;
+  --wm-face:#ffffff; --wm-ext:#e11d2e;
+  --shadow:0 10px 30px rgba(0,0,0,.5);
+  --font-body:'Outfit','Cairo',system-ui,sans-serif;
+  --font-display:'Bungee','Cairo',system-ui,sans-serif;
+  --font-code:'JetBrains Mono',ui-monospace,Consolas,monospace;
+  --hdr:64px;
+}
+[data-theme="light"]{
+  --bg:#ffffff; --bg2:#fff3f3; --card:#ffffff; --card2:#fff0f0; --line:#f1cfd2;
+  --text:#1c0b0d; --muted:#6f5558;
+  --red:#d90429; --red2:#8d021a; --red-ink:#fff; --glow:rgba(217,4,41,.22);
+  --code-bg:#fff6f6; --code-ink:#7a0a1a;
+  --wm-face:#e3122d; --wm-ext:#7a0012;
+  --shadow:0 10px 30px rgba(140,20,35,.14);
+}
+[dir="rtl"]{--font-body:'Cairo','Outfit',system-ui,sans-serif}
